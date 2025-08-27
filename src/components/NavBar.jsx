@@ -1,5 +1,6 @@
 import "../css/NavBar.css"
 import CartWidget from "./CartWidget"
+import CartWidgetIcons from "./CartWidgetIcons"
 //si tengo la imagen dentro de src la tengo que importar
 //import logoAssets from "../assets/react.svg"
 
@@ -14,7 +15,8 @@ const NavBar= ()=>{
             <a className='anchor-nav' href="">Nuevos</a>
             <a className='anchor-nav' href="">Ofertas</a>
             <a className='anchor-nav' href="">Más vendidos</a>
-            <CartWidget/>
+            {/* <CartWidget/> */}
+            <CartWidgetIcons/>
         </nav>
     )
 }
