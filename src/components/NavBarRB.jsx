@@ -6,6 +6,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidgetIcons from './CartWidgetIcons';
 
 function NavBarRB() {
+  console.log('Navbar')
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>

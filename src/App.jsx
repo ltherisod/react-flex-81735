@@ -5,14 +5,12 @@ import ItemListContainer from './components/ItemListContainer'
 import NavBarRB from './components/NavBarRB';
 function App() {
 
-
-  console.log('App')
-
   return (
     <> 
     <NavBarRB/>
     <ItemListContainer mensaje="Bienvenidos a CoderShop!"/>
     <ItemCount/>
+    
     </>
   )
 }
