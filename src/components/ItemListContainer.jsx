@@ -5,7 +5,6 @@ import ItemList from "./ItemList"
 
 const ItemListContainer = ({mensaje})=>{
     const [data, setData] = useState([])
-    // const {mensaje} = props
     
     useEffect(()=>{
         getProducts()
@@ -18,7 +17,6 @@ const ItemListContainer = ({mensaje})=>{
     return(
         <div>
             <h1>{mensaje}</h1>
-            {/* {data.map((prod)=> <div key={prod.id}><p>{prod.name}</p></div>)} */}
             <ItemList data={data} />
         </div>
     )
