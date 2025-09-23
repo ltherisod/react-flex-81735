@@ -5,7 +5,6 @@ import NavBarRB from './components/NavBarRB';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Error from './components/Error';
-// import Landing from './examples/Landing';
 function App() {
 
   return (

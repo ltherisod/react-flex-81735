@@ -17,9 +17,6 @@ const ItemCount = ({stock, onAdd})=>{
         onAdd(count)
         }
             
-
-
-    
     return(
         <div>
             <button className='btn btn-danger' onClick={restar}>-</button>
