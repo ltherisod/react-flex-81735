@@ -25,11 +25,11 @@ const ItemListContainer = ({mensaje})=>{
   
 
     return(
-        <div>
+        <>
            
-            <h1>{mensaje} {type && <span style={{textTransform:'capitalize'}}>{type}</span>}</h1>
+            <h1 className="text-center">{mensaje} {type && <span style={{textTransform:'capitalize'}}>{type}</span>}</h1>
             <ItemList data={data} />
-        </div>
+        </>
     )
 }
 export default ItemListContainer
