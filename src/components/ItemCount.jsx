@@ -18,13 +18,13 @@ const ItemCount = ({stock, onAdd})=>{
         }
             
     return(
-        <div style={{width:'10%'}} className=' d-flex justify-content-between align-items-center'>
+        <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
         <div>
             <button className='btn btn-danger' onClick={restar}>-</button>
             <span className='btn'>{count}</span>
              <button className='btn btn-success' onClick={sumar}>+</button>
         </div>
-             <button className='btn btn-primary' onClick={comprar} disabled={stock===0 || count === 0}>Comprar</button>
+             <button className='btn btn-primary mt-2' onClick={comprar} disabled={stock===0 || count === 0}>Comprar</button>
         </div>
     )
 }
