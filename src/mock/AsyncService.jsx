@@ -1,15 +1,5 @@
-const productos =[
-    {
-        id:'01',//no lo pongo en firebase
-        name:'Random 1',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum at, assumenda enim quae nulla.',
-        stock:25,
-        price:25000,
-        img:'https://picsum.photos/200',
-        category:'nuevos'
-    },
+export const productos =[
      {
-        id:'02',
         name:'Random 2',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum at, assumenda enim quae nulla.',
         stock:15,
@@ -18,7 +8,6 @@ const productos =[
         category:'ofertas'
     },
      {
-        id:'03',
         name:'Random 3',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum at, assumenda enim quae nulla.',
         stock:10,
@@ -27,7 +16,6 @@ const productos =[
         category:'ofertas'
     },
      {
-        id:'04',
         name:'Random 4',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum at, assumenda enim quae nulla.',
         stock:15,

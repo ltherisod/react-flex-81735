@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"
-import { getProducts } from "../mock/AsyncService"
+import { getProducts, productos } from "../mock/AsyncService"
 import ItemList from "./ItemList"
 import { useParams } from "react-router-dom"
 import LoaderComponent from "./LoaderComponent"
-import { collection, getDocs, query, where } from "firebase/firestore"
+import { addDoc, collection, getDocs, query, where } from "firebase/firestore"
 import { db } from "../services/firebase"
 
 const ItemListContainer = ({mensaje})=>{
@@ -32,7 +32,7 @@ const ItemListContainer = ({mensaje})=>{
                     }
                 })
                 // console.log(list)
-                
+
                 setData(list)
         })
         .catch((error)=> console.log(error))
@@ -57,10 +57,18 @@ const ItemListContainer = ({mensaje})=>{
     //     //tiene que estar a la escucha del cambio de categoria
     // },[type])
 
+    // SE HACE UNA SOLA VEZ Y DESPUES SE BORRA!!! 
+    // const subirData = ()=>{
+    //     console.log('SUBIENDO DATA...')
+    //     const coleccionAAgregar= collection(db, "productos")
+    //         productos.map((prod)=> addDoc(coleccionAAgregar, prod))
+    // }
   
 
     return(
        <>
+       {/* DESPUES SE BORRA!!!! */}
+       {/* <button onClick={subirData}>SUBIR DATA!</button> */}
        {
         loading 
         ? <LoaderComponent/>
