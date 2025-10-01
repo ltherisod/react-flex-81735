@@ -7,12 +7,12 @@ import { CartContext } from "../context/CartContext";
 
 const CartWidgetIcons = ()=>{
     console.log('CartWidget')
-    const {cart}= useContext(CartContext)
-    console.log(cart)
+    const {cart, cartQuantity}= useContext(CartContext)
+  
     return(
         <div>
             <BsCart4  fontSize={'1.5rem'}/>
-             <Badge bg="danger">5</Badge>
+             {cart.length > 0 && <Badge bg="danger">{cartQuantity()}</Badge>}
         </div>
     )
 }

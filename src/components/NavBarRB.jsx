@@ -30,7 +30,7 @@ function NavBarRB() {
              
             </NavDropdown>
           </Nav>
-          <CartWidgetIcons/>
+         <NavLink to='/cart' style={{textDecoration:'none', color:'black'}}><CartWidgetIcons/></NavLink> 
         </Navbar.Collapse>
       </Container>
     </Navbar>
