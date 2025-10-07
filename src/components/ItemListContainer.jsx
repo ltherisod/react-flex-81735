@@ -1,18 +1,14 @@
 import { useState, useEffect } from "react"
-import { getProducts, productos } from "../mock/AsyncService"
 import ItemList from "./ItemList"
 import { useParams } from "react-router-dom"
 import LoaderComponent from "./LoaderComponent"
-import { addDoc, collection, getDocs, query, where } from "firebase/firestore"
+import {  collection, getDocs, query, where } from "firebase/firestore"
 import { db } from "../services/firebase"
 
 const ItemListContainer = ({mensaje})=>{
     const [data, setData] = useState([])
     const [loading, setLoading]= useState(false)
     const {type}=useParams()
-    console.log('categoria: ', type)
-
-
 //FIREBASE
 
     useEffect(()=>{
@@ -39,36 +35,12 @@ const ItemListContainer = ({mensaje})=>{
         .finally(()=> setLoading(false))
     },[type])
 
-    //PROMESA
-    // useEffect(()=>{
-    //     setLoading(true)
-    //     getProducts()
-    //     .then((res)=> {
-    //         if(type){
-    //             //filtrar
-    //             setData(res.filter((prod)=> prod.category === type))
-    //         }else{
-    //             //type es undefined y no filtro
-    //             setData(res)
-    //         }
-    //     })
-    //     .catch((error)=> console.error(error))
-    //     .finally(()=> setLoading(false))
-    //     //tiene que estar a la escucha del cambio de categoria
-    // },[type])
-
-    // SE HACE UNA SOLA VEZ Y DESPUES SE BORRA!!! 
-    // const subirData = ()=>{
-    //     console.log('SUBIENDO DATA...')
-    //     const coleccionAAgregar= collection(db, "productos")
-    //         productos.map((prod)=> addDoc(coleccionAAgregar, prod))
-    // }
+  
   
 
     return(
        <>
-       {/* DESPUES SE BORRA!!!! */}
-       {/* <button onClick={subirData}>SUBIR DATA!</button> */}
+      
        {
         loading 
         ? <LoaderComponent/>
